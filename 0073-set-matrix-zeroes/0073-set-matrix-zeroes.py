@@ -12,15 +12,15 @@ class Solution:
                     # 해당 행과 열의 모든 값을 임시로 -1로 변경
                     for i in range(rows):  # 해당 열의 모든 값
                         if matrix[i][c] != 0:
-                            matrix[i][c] = -1
+                            matrix[i][c] = "a"
                     for j in range(cols):  # 해당 행의 모든 값
                         if matrix[r][j] != 0:
-                            matrix[r][j] = -1
+                            matrix[r][j] = "a"
         
         # 두 번째 스캔: 임시 값 -1을 최종적으로 0으로 변환
         for r in range(rows):
             for c in range(cols):
-                if matrix[r][c] == -1:
+                if matrix[r][c] == "a":
                     matrix[r][c] = 0
 
                 
